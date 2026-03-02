@@ -227,14 +227,11 @@ ShellRoot {
     }
 
     // ─── Launcher for NetworkSecurityBar ──────────────
+    // FIXED VERSION – using sh -c so $HOME is expanded correctly
     Process {
         id: openNetworkPanel
-        command: [
-            "env",
-            "QT_QUICK_BACKEND=software",
-            "quickshell",
-            "--path",
-            "/home/ppk/.config/quickshell/NetworkSecurityBar/NetworkSecurityBar.qml"
+        command: ["sh", "-c",
+        "env QT_QUICK_BACKEND=software quickshell --path \"$HOME/.config/quickshell/NetworkSecurityBar/NetworkSecurityBar.qml\""
         ]
     }
 
@@ -297,15 +294,14 @@ ShellRoot {
                 ScrollBar.vertical.policy: ScrollBar.AsNeeded
                 ScrollBar.horizontal.policy: ScrollBar.AlwaysOff
 
-                // ─── Darker scrollbar styling ───────────────────────────────
                 ScrollBar.vertical.background: Rectangle {
-                    visible: scrollView.ScrollBar.vertical.active   // only show when actually scrolling
-                    color: "#252627"           // very dark track
+                    visible: scrollView.ScrollBar.vertical.active
+                    color: "#252627"
                     radius: 6
                 }
                 ScrollBar.vertical.contentItem: Rectangle {
                     radius: 6
-                    color: "#252627"           // subdued dark gray handle
+                    color: "#252627"
                     implicitWidth: 3
                     implicitHeight: 40
                 }
