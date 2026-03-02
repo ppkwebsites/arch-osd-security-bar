@@ -41,3 +41,24 @@ Add the following line to your ~/.config/hypr/hyprland.conf:
 Bash
 # Toggle System Security OSD (Example using Super + S)
 bind = $mainMod, S, exec, ~/.config/quickshell/SecurityBar/SecurityBar.sh
+
+### 1. Install Required Dependencies
+
+Since this OSD relies on specific system tools to pull real-time data, you must install the following packages via `pacman`:
+
+* **quickshell**: The core framework required to run the `.qml` files.
+* **networkmanager**: Provides `nmcli`, which the OSD uses to detect the active network device and local IP.
+* **pacman-contrib**: Required for the `checkupdates` command to see pending updates.
+* **wl-clipboard**: Required for the **Copy** buttons to send commands or links to the Wayland clipboard.
+* **iproute2**: Used to parse network statistics and speed via the `ip -s link` command.
+
+### 2. Set Up the File Structure
+
+The project is currently configured to run from a specific directory. Follow these steps to ensure the paths link correctly:
+
+1. **Create the configuration folder**:
+   ```bash
+   mkdir -p ~/.config/quickshell/SecurityBar/
+   mkdir -p ~/.config/quickshell/SecurityBar/
+
+Place the files: Move SecurityBar.qml and SecurityBar.sh into that folder.
