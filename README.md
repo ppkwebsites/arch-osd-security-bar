@@ -60,6 +60,5 @@ The project is currently configured to run from a specific directory. Follow the
 1. **Create the configuration folder**:
    ```bash
    mkdir -p ~/.config/quickshell/SecurityBar/
-   mkdir -p ~/.config/quickshell/SecurityBar/
 
 Place the files: Move SecurityBar.qml and SecurityBar.sh into that folder.
