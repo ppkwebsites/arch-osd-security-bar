@@ -13,6 +13,7 @@ A sleek, sidebar-style **On-Screen Display (OSD)** built with Quickshell for Arc
 * **Interactive Controls**: Includes "Copy" buttons for common terminal commands and quick links to security resources.
 
 ---
+Run the SecurityBar.qml with a keybinding. The NetworkSecurityBar.qml gets called within SecurityBar.qml
 
 ### Installation & Setup
 
