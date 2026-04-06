@@ -1,3 +1,5 @@
+Put SecurityBar.gml, NetworkSecurityBar.qml and lynis.qml all in the same folder. SecurityBar.qml is the main OSD and it runs the other two so put a keybinding on it to open it. 
+
 # System Security OSD for Quickshell
 
 A sleek, sidebar-style **On-Screen Display (OSD)** built with Quickshell for Arch Linux. This tool provides a real-time security overview of your system, specifically designed for use with Wayland compositors like Hyprland.
@@ -13,7 +15,6 @@ A sleek, sidebar-style **On-Screen Display (OSD)** built with Quickshell for Arc
 * **Interactive Controls**: Includes "Copy" buttons for common terminal commands and quick links to security resources.
 
 ---
-Run the SecurityBar.qml with a keybinding. The NetworkSecurityBar.qml gets called within SecurityBar.qml
 
 ### Installation & Setup
 
